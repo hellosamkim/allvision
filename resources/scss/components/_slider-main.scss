@@ -1,0 +1,57 @@
+/* ------------------------------------------------------------ *\ 
+	- Slider Main
+\* ------------------------------------------------------------ */
+
+.slider-main {
+	@include posAbsolute;
+
+	.slides,
+	.slide,
+	.slide__image,
+	.tns-outer,
+	.tns-ovh,
+	.tns-inner {
+		@include posAbsolute;
+
+		max-width: 100vw;
+	}
+
+	.tns-nav {
+		position: absolute; 
+		left: 20px;
+		right: 20px; 
+		bottom: 60px;
+		display: flex; 
+		align-items: center;
+		justify-content: center;
+		z-index: 888;
+		font-size: 0;  
+		line-height: 0; 
+		flex-wrap: wrap;
+
+		& > * {
+			width: 141px;
+			height: 3px;
+			background-color: color(white a(40%)); 
+			border: 0;  
+			position: relative;
+
+			&:before {
+				@include posAbsolute;
+
+				content: ' ';
+				background-color: white; 
+				width: 0%;
+			}
+
+			@include breakpoint-down(mobile) {
+				width: 33.333%;
+			}
+		}  
+
+		& > .tns-nav-active:before {
+			width: 100%; 
+			transition: width 8s linear; 
+		}
+	}
+}

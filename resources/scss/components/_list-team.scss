@@ -1,0 +1,50 @@
+/* ------------------------------------------------------------ *\ 
+	- List Team
+\* ------------------------------------------------------------ */
+
+.list-team {
+	width: 100%;
+	position: relative; 
+
+	& > ul {
+		display: flex; 
+		flex-wrap: wrap;
+		position: relative; 
+		margin: -30px -20px; 
+
+		@include breakpoint-down(mobile) {
+			margin: -10px; 
+		}
+	}
+
+	& > ul > li {
+		width: 33.333%;
+		padding: 30px 20px; 
+
+		@include breakpoint-down(tablet-portrait) {
+			width: 50%; 
+		}
+
+		@include breakpoint-down(mobile) {
+			padding: 10px; 
+
+			&:hover {
+				position: relative; 
+				z-index: 100;
+			}
+
+			&:nth-child(even) {
+				.article-team {
+					.article__image-hover {
+						right: 0; 
+						left: calc((0 - 50vw) + 5px);
+					}
+
+					.article__body {
+						left: calc(0 - 100%);
+					}					
+				}
+			}
+		}
+	}
+}

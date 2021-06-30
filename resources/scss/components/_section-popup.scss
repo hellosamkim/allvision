@@ -1,0 +1,150 @@
+/* ------------------------------------------------------------ *\ 
+	- Section Popup
+\* ------------------------------------------------------------ */
+
+.section-popup {
+	position: fixed; 
+	z-index: 9999;
+	left: 0; 
+	right: 0; 
+	top: 0; 
+	bottom: 0;
+	background-color: color(white a(80%));
+	overflow: hidden; 
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity $t-duration, visibility $t-duration;	
+
+	.section__holder {
+		display: flex; 
+	} 
+
+	.section__wrap {
+		display: flex; 
+		min-height: 100vh;
+		min-height: calc(var(--vh, 1vh) * 100);
+		align-items: center;
+	}
+
+	.section__popup {
+		display: none; 
+		max-width: 990px;
+		margin-left: auto; 
+		margin-right: auto;
+		background-color: white;
+		padding: 66px 85px;
+
+		@include breakpoint-down(tablet-portrait) {
+			padding: 40px; 
+		}
+
+		@include breakpoint-down(mobile) {
+			padding: 30px 20px; 
+		}
+
+		&.active {
+			display: block;
+		}  
+
+		& > a {
+			position: absolute; 
+			right: 40px; 
+			top: 40px; 
+			width: 15px; 
+			height: 15px; 
+			font-size: 0; 
+			line-height: 0; 
+			text-decoration: none;
+
+			@include breakpoint-down(tablet-portrait) {
+				right: 20px; 
+				top: 20px;
+			}
+
+			@include breakpoint-down(mobile) {
+				top: 10px; 
+				right: 10px; 
+			}
+
+			@media (hover: hover), (-ms-high-contrast: none) {
+				&:hover {
+					transform: rotate(360deg);
+				}
+			}
+		}
+
+		& > a i {
+			@util center;
+		}
+	}
+
+	.gform_wrapper {
+		.gform_heading {
+			display: flex; 
+			text-align: left; 
+			margin-bottom: 25px;
+
+			@include breakpoint-down(mobile) {
+				display: block; 
+			}
+
+			& > * {
+				width: 50%;
+				flex-grow: 1;
+
+				@include breakpoint-down(mobile) {
+				 	width: 100%; 
+				 } 
+			}
+
+			& > *:not(:last-child):first-child {
+				padding-right: 40px; 
+
+				@include breakpoint-down(tablet-portrait) {
+					padding-right: 60px;
+				}
+
+				@include breakpoint-down(mobile) {
+					padding-right: 0; 
+					margin-bottom: 15px;
+				}
+			}
+
+			& > *:not(:first-child):last-child {
+				padding-left: 9px; 
+
+				@include breakpoint-down(mobile) {
+					padding-left: 0;
+				}
+			}
+		}
+
+		.gform_body {
+			& > ul {
+				margin: -15px -8px; 
+			}
+
+			& > ul > li {
+				padding: 15px 8px; 
+			}
+		}
+	}
+}
+
+body.show-popup {
+	&.is-touch {
+		position: relative; 
+		overflow: hidden; 
+	}
+
+	.section-popup {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.wrapper {
+		filter: blur(5px);
+	}
+}

@@ -1,0 +1,38 @@
+/* ------------------------------------------------------------ *\
+	Search Form
+\* ------------------------------------------------------------ */
+
+.search-form {
+	position: relative;
+	overflow: hidden;
+
+	.search__field {
+		display: block;
+		width: 100%;
+		padding: 10px;
+		border: 1px solid #ccc;
+		background: #f7f7f7;
+	}
+
+	.search__field:focus {
+		background-color: #fff;
+	}
+
+	.search__field::-webkit-input-placeholder,
+	.search__field::-moz-placeholder,
+	.search__field:-ms-input-placeholder,
+	.search__field::placeholder {
+		color: #777;
+	}
+
+	.screen-reader-text {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0,0,0,0);
+		border: 0;
+	}
+}

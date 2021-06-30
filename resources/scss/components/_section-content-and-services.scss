@@ -1,0 +1,56 @@
+/* ------------------------------------------------------------ *\ 
+	- Section Content And Services
+\* ------------------------------------------------------------ */
+
+.section-content-and-services {
+	margin: 120px 0;
+
+	@include breakpoint-down(mobile) {
+		margin: 50px 0; 
+	} 
+
+	.shell {
+		align-items: center;
+	}
+
+	.list-services-secondary--1of2 {
+		& > ul > li {
+			@include breakpoint-down(tablet-portrait) {
+				width: 100%;
+			}
+		}
+	}
+
+	.section__content {
+		width: 50%;
+		flex-grow: 1;
+
+		&:not(:last-child) {
+			padding-right: 80px; 
+
+			@include breakpoint-down(tablet-portrait) {
+				padding-right: 40px; 
+			}
+
+			@include breakpoint-down(mobile) {
+				width: 100%; 
+				padding-right: 0; 
+				text-align: center;
+			}
+		}
+	}
+
+	.section__services {
+		width: calc(50% - 80px);
+		margin-left: auto;
+		flex-grow: 1;		
+
+		@include breakpoint-down(mobile) {
+			width: 100%;
+
+			&:not(:first-child) {
+				margin-top: 50px;
+			}
+		}
+	}
+}

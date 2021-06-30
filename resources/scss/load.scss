@@ -1,0 +1,50 @@
+/* ------------------------------------------------------------ *\ 
+	Node_Modules
+\* ------------------------------------------------------------ */
+
+@import '~tiny-slider/dist/tiny-slider.css';
+@import '~aos/dist/aos.css';
+@import '~@fortawesome/fontawesome-free/css/all.css';
+@import '~magnific-popup/dist/magnific-popup.css';
+
+/* ------------------------------------------------------------ *\
+	Generic
+\* ------------------------------------------------------------ */
+
+@import "generic/variables.scss";
+@import "generic/functions.scss";
+@import "generic/mixins.scss";
+@import "generic/reset.scss";
+@import "generic/reset-section.scss";
+@import "generic/reset-btn.scss";
+@import "generic/reset-icon.scss";
+@import "generic/reset-list.scss";
+@import "generic/reset-logo.scss";
+@import "generic/reset-nav.scss";
+@import "generic/fonts.scss";
+@import "generic/base.scss";
+@import "generic/helpers.scss";
+
+/* ------------------------------------------------------------ *\
+	Default
+\* ------------------------------------------------------------ */
+
+@import "default/*.scss";
+
+/* ------------------------------------------------------------ *\
+	Components
+\* ------------------------------------------------------------ */
+
+@import "components/*.scss";
+
+/* ------------------------------------------------------------ *\ 
+	Overwrites
+\* ------------------------------------------------------------ */
+
+@import "overwrites/*.scss";
+
+/* ------------------------------------------------------------ *\
+	Custom Blocks
+\* ------------------------------------------------------------ */
+
+@import "../../blocks/**/style.css";

@@ -1,0 +1,71 @@
+/* ------------------------------------------------------------ *\ 
+	- Block Numbers
+\* ------------------------------------------------------------ */
+
+.block-numbers {
+	width: 100%;
+	position: relative; 
+	overflow: hidden; 
+
+	.block__holder {
+		margin: -20px -37px; 
+		display: flex; 
+		flex-wrap: wrap;
+
+		@include breakpoint-down(mobile) {
+			justify-content: center;
+			margin: -20px; 
+		}
+	} 
+
+	.block__col {
+		padding: 20px 0; 
+		position: relative; 
+		text-align: center; 
+		font-size: 14px; 
+		line-height: 1.71;
+
+		& > * {
+			position: relative; 
+			padding-left: 37px; 
+			padding-right: 37px;
+
+			@include breakpoint-down(mobile) {
+				padding-left: 20px; 
+				padding-right: 20px;
+			}
+		}
+
+		h4 {
+			color: $c-secondary;
+			margin-bottom: 0;
+		}
+
+		h4:before {
+			content: attr(data-prefix);
+			display: inline-block; 
+		}
+
+		h4:after {
+			content: attr(data-suffix);
+			display: inline-block; 
+		}
+
+		p {
+			color: $c-quaternary;
+		}
+
+		&:not(:last-child) {
+			h4:before {
+				content: ' ';
+				position: absolute; 
+				right: 0; 
+				top: 50%;
+				width: 1px;
+				height: 30px;
+				background-color: $c-secondary;
+				margin-top: -15px;   
+			}			
+		}
+	}
+}

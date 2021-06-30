@@ -1,0 +1,91 @@
+/* ------------------------------------------------------------ *\ 
+	- Accordion Main
+\* ------------------------------------------------------------ */
+
+.accordion-main {
+	width: 100%;
+
+	.active {
+		&.accordion__group {
+			background-color: white;
+			color: $c-primary; 
+		}
+
+		.accordion__head {
+			&:before {
+				background-color: $c-primary; 
+			}
+		}
+
+		.accordion__body {
+			padding-top: 15px; 
+			opacity: 1;
+			visibility: visible;
+			max-height: 999px;
+		}
+	}
+
+	.accordion__group {
+		width: 100%;
+		background-color: $c-secondary;
+		padding: 28px 30px; 
+		color: white;
+		transition: background $t-duration, color $t-duration; 
+		text-align: left;
+
+		&:not(:last-child) {
+			margin-bottom: 10px;
+
+			@include breakpoint-down(mobile) {
+				margin-bottom: 0; 
+			}
+		} 
+	}
+
+	.accordion__head {
+		position: relative; 
+		width: 100%;
+		padding-left: 15px; 
+		cursor: pointer; 
+		transition: opacity $t-duration;
+
+		@media (hover: hover), (-ms-high-contrast: none) {
+			&:hover {
+				opacity: 0.75;
+			}
+		}
+
+		& > * {
+			pointer-events: none;
+		}
+
+		&:before {
+			content: ' ';
+			position: absolute; 
+			left: 0; 
+			top: 50%;
+			transform: translateY(-50%);
+			width: 5px; 
+			height: 5px; 
+			background-color: white;
+			transition: backgorund $t-duration; 
+		}
+
+		h4 {
+			@include breakpoint-down(mobile) {
+				font-size: 18px;
+			}
+		}
+	}
+
+	.accordion__body {
+		width: 100%;
+		position: relative; 
+		overflow: hidden; 
+		opacity: 0;
+		visibility: hidden;
+		max-height: 0px;
+		transition: padding $t-duration, opacity $t-duration, visibility $t-duration; 
+		padding-left: 15px;
+	}
+}

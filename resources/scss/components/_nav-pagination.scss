@@ -1,0 +1,60 @@
+/* ------------------------------------------------------------ *\ 
+	- Nav Pagination
+\* ------------------------------------------------------------ */
+
+.nav-pagination {
+	& > p {
+		font-size: 14px; 
+		line-height: 1.71;
+		text-transform: uppercase; 
+		font-weight: 700; 
+		color: $c-quaternary;
+	}
+
+	& > ul {
+		justify-content: center;
+		position: relative; 
+		margin: -15px; 
+	}
+
+	& > ul > li {
+		padding: 15px; 
+		font-family: $ff-gt;
+		font-weight: 500; 
+
+		&.active > a {
+			color: $c-tertiary;
+
+			&:before {
+				background-color: $c-tertiary;
+			}
+		}
+	}
+
+	a {
+		position: relative; 
+		padding-bottom: 1px; 
+		color: $c-secondary;
+
+		&:before {
+			content: ' ';
+			position: absolute; 
+			left: 0; 
+			right: 0; 
+			bottom: 0;
+			height: 2px;
+			background-color: $c-secondary;  
+			transition: background $t-duration;
+		}
+
+		@media (hover: hover), (-ms-high-contrast: none) {
+			&:hover {
+				color: $c-tertiary;
+
+				&:before {
+					background-color: $c-tertiary;
+				}
+			}
+		}
+	}
+}

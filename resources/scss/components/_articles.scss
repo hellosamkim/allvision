@@ -1,0 +1,14 @@
+/* ------------------------------------------------------------ *\
+	Articles
+\* ------------------------------------------------------------ */
+
+.articles {
+	.articles__items {
+		list-style: none;
+		padding: 0;
+	}
+
+	.articles__item + .articles__item {
+		margin-top: 30px;
+	}
+}

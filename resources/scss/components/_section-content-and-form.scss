@@ -1,0 +1,47 @@
+/* ------------------------------------------------------------ *\ 
+	- Section Content And Form
+\* ------------------------------------------------------------ */
+
+.section-content-and-form {
+	margin: 80px 0;
+
+	@include breakpoint-down(mobile) {
+		margin: 50px 0; 
+	}
+
+	.section__content {
+		width: 412px;
+		flex-grow: 1;
+
+		&:not(:last-child) {
+			padding-right: 80px; 
+
+			@include breakpoint-down(tablet-portrait) {
+				padding-right: 40px; 
+			}
+
+			@include breakpoint-down(mobile) {
+				width: 100%; 
+				padding-right: 0; 
+				text-align: center;
+			}
+		}
+	}
+
+	.section__form {
+		width: calc(100% - 412px);
+		flex-grow: 1;		
+
+		@include breakpoint-down(mobile) {
+			width: 100%;
+
+			&:not(:first-child) {
+				margin-top: 50px;
+			}
+		}
+
+		& > *:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

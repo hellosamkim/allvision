@@ -1,0 +1,57 @@
+/* ------------------------------------------------------------ *\ 
+	- Section Content And Accordion
+\* ------------------------------------------------------------ */
+
+.section-content-and-accordion {
+	margin: 120px 0;
+
+	@include breakpoint-down(mobile) {
+		margin: 50px 0; 
+	} 
+
+	.shell {
+		align-items: center;
+	}
+
+	.section__content {
+		width: 50%;
+		flex-grow: 1;
+
+		&:not(:last-child) {
+			padding-right: 80px; 
+
+			@include breakpoint-down(tablet-portrait) {
+				padding-right: 40px; 
+			}
+
+			@include breakpoint-down(mobile) {
+				width: 100%; 
+				padding-right: 0; 
+				text-align: center;
+			}
+		}
+	}
+
+	.section__accordion {
+		width: 50%;
+		flex-grow: 1;		
+
+		@include breakpoint-down(mobile) {
+			width: 100%;
+			text-align: center; 
+
+			&:not(:first-child) {
+				margin-top: 50px;
+			}
+		}
+
+		& > h4 {
+			margin-bottom: 28px;
+			letter-spacing: -0.63px;
+		}
+
+		& > *:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

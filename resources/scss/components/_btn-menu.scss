@@ -1,0 +1,59 @@
+/* ------------------------------------------------------------ *\ 
+	Button Menu
+\* ------------------------------------------------------------ */
+
+.btn-menu { 
+	display: none; 
+	width: 32px; 
+	height: 32px; 
+	position: relative; 
+
+	*,
+	*:before,
+	*:after { 
+		transition: background $t-duration, margin $t-duration, transform $t-duration; 
+		pointer-events: none; 
+	}
+	
+	span,
+	span:before,
+	span:after { 
+		content: ' '; 
+		position: absolute; 
+		left: 0; 
+		right: 0; 
+		top: 50%; 
+		margin-top: -1px; 
+		height: 2px; 
+		background-color: black; 
+	}
+	
+	span:before { 
+		margin-top: -7px; 
+	}
+	
+	span:after { 
+		margin-top: 5px; 
+	}
+}
+
+/* Show Nav Main  */
+
+body.show-nav-main .btn-menu {
+	span { 
+		background-color: transparent; 
+
+		&:before,
+		&:after { 
+			margin-top: -1px; 
+		}
+		
+		&:before { 
+			transform: rotate(45deg); 
+		}
+		
+		&:after { 
+			transform: rotate(-45deg); 
+		}
+	}
+}

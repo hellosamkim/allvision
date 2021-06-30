@@ -1,0 +1,256 @@
+/* ------------------------------------------------------------ *\
+	Post
+\* ------------------------------------------------------------ */
+
+.post {
+	width: 100%;
+
+	.post__title {
+		width: 100%; 
+
+		&:not(:last-child) {
+			margin-bottom: 25px;
+		}
+
+		h1 {
+			margin-bottom: 12px; 
+		}
+
+		p {
+			font-size: 14px; 
+			line-height: 1.71;
+		}
+
+		h6 {
+			font-family: $ff-sans-serif;
+			font-weight: 700; 
+			text-transform: uppercase;
+			margin-bottom: 22px; 
+		}
+
+		& > *:last-child {
+			margin-bottom: 0;
+		}
+	}
+	
+	.post__image {
+		&:not(:last-child) {
+			margin-bottom: 25px;
+		}
+
+		img {
+			display: block; 
+			width: 100%;
+			height: auto; 
+		}		
+	}
+
+	.post__entry { 
+		@util clearfix; 
+		width: 100%; 
+		
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-family: $ff-sans-serif;
+		}
+
+		h5 {
+			font-size: 18px; 
+			line-height: 1.33;
+		}
+
+		h6 {
+			font-family: $ff-sans-serif;
+			margin-bottom: 0; 
+		}
+	
+		& > ul:not([class]),
+		& > ol:not([class]) { 
+			padding-left: 19px; 
+
+			li:not(:last-child) {
+				margin-bottom: 12px;
+			}
+		}
+
+		& > ul:not([class]) {
+			list-style: none; 
+
+			li {
+				position: relative; 
+			}
+
+			li:before {
+				content: ' ';
+				width: 3px;
+				height: 3px;
+				border-radius: 50%;
+				background-color: $c-primary;
+				position: absolute; 
+				left: -19px; 
+				top: 10px; 
+			}
+		}
+
+		& > ul:not([class]) ol,
+		& > ul:not([class]) ul,
+		& > ol:not([class]) ol,
+		& > ol:not([class]) ul { 
+			padding-left: 19px; 
+		}
+
+		& > blockquote { 
+			border-left: 2px solid $c-primary; 
+			margin-left: 0; 
+			padding: 0 0 0 16px; 
+		}
+
+		p {
+
+		}
+		
+		hr { 
+			max-width: 100%; 
+			border: 0; 
+			height: 2px; 
+			background-color: $c-primary; 
+		}
+		
+		iframe { 
+			width: 100%; 
+		}
+
+		img {
+			&.alignleft {
+
+			}
+
+			&.alignright {
+				
+			}
+
+			&.aligncenter {
+				
+			}
+
+			&.alignnone {
+				
+			}
+		}
+
+		a[href^="mailto"] {
+			text-decoration: none; 
+
+			@media (hover: hover), (-ms-high-contrast: none) {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.alignleft {
+			float: left;
+			width: 50%; 
+
+			@include breakpoint-down(mobile) {
+				float: none; 
+				width: 100%; 
+			}
+		}
+
+		.alignright {
+			float: right;
+			width: 50%; 
+
+			@include breakpoint-down(mobile) {
+				float: none; 
+				width: 100%; 
+			}
+		}
+
+		.aligncenter {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.alignnone {
+
+		}
+
+		& > *.alignwide { 
+			width: 100%; 
+			max-width: 100%; 
+			clear: both; 
+		}
+		
+		& > *.aligncenter { 
+			margin-left: auto; 
+			margin-right: auto; 
+		}
+		
+		& > *.alignfull { 
+			margin-left: calc(50% - 50vw); 
+			margin-right: calc(50% - 50vw); 
+			width: auto; 
+		}
+
+		.wp-caption {
+			img {
+				display: block; 
+				width: 100%;
+				height: auto; 
+			}
+
+			&:not(:first-child) {
+				margin-top: 80px;
+			}
+		}
+		
+		.wp-caption-text {
+			font-size: 12px; 
+			line-height: 1.33;
+			width: 100%;
+			margin-top: 10px; 
+			position: relative; 
+			padding: 0 0 0 6px; 
+			display: block;
+			text-align: left;
+
+			@include breakpoint-down(mobile) {
+				font-size: 13px; 
+				line-height: 1.23;
+				text-align: center;
+			}
+
+			&:before {
+				content: '1';
+				position: absolute; 
+				left: 0; 
+				top: 0; 
+				font-size: 5px; 
+				line-height: 1.00;
+			}
+		}
+
+		& > *:last-child { 
+			margin-bottom: 0; 
+		}
+		
+		& > *:first-child { 
+			margin-top: 0; 
+		}
+	}
+
+	.post__update {
+		width: 100%; 
+		font-size: 14px; 
+
+		&:not(:first-child) {
+			margin-top: 28px; 
+		}
+	}
+}

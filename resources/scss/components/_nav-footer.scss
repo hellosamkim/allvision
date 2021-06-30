@@ -1,0 +1,63 @@
+/* ------------------------------------------------------------ *\ 
+	- Nav Footer
+\* ------------------------------------------------------------ */
+
+.nav-footer {
+	position: relative; 
+	overflow: hidden; 
+
+	& > ul {
+		position: relative; 
+		margin: -22px; 
+
+		@include breakpoint-down(mobile) {
+			display: block;
+			margin: 0;
+		}
+	}
+
+	& > ul > li {
+		font-size: 12px; 
+		line-height: 1.83;
+		padding: 22px; 
+
+		@include breakpoint-down(mobile) {
+			padding: 0;
+		}
+
+		&.nav__icon-pin > a {
+			position: relative; 
+			padding-left: 11px;
+
+			@include breakpoint-down(mobile) {
+				margin-top: 40px;
+			}
+
+			&:before {
+				content: ' ';
+				position: absolute; 
+				left: 0; 
+				top: 50%;
+				width: 6px; 
+				height: 8px; 
+				background-image: url(../images/ico-marker.svg);  
+				background-size: 6px 8px;
+				background-repeat: no-repeat;
+				background-position: center center;  
+				margin-top: -4px;
+			} 
+		}
+	}
+
+	a {
+		@include breakpoint-down(mobile) {
+			display: inline-block; 
+		}
+	}
+
+	@media (hover: hover), (-ms-high-contrast: none) {
+		li:hover > a {
+			text-decoration: underline;
+		}
+	}
+}

@@ -1,0 +1,48 @@
+/* ------------------------------------------------------------ *\ 
+	- List Services
+\* ------------------------------------------------------------ */
+
+.list-services {
+	width: 100%;
+	position: relative; 
+	overflow: hidden; 
+
+	& > ul {
+		display: flex; 	
+		flex-wrap: wrap;
+		position: relative;
+		margin: -40px -20px; 
+		justify-content: center;
+
+		@include breakpoint-down(mobile) {
+			margin: -20px; 
+		}
+	}
+
+	& > ul > li {
+		width: 33.333%; 
+		padding: 40px 20px; 
+		flex-grow: 1;
+		max-width: 414px;
+
+		@include breakpoint-down(tablet-portrait) {
+			width: 50%; 
+		}
+
+		@include breakpoint-down(mobile) {
+			width: 100%;
+			padding: 20px;
+			max-width: 100%;
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\ 
+	-- Large
+\* ------------------------------------------------------------ */
+
+.list-services--large {
+	& > ul > li {
+		max-width: 100%;
+	}
+}

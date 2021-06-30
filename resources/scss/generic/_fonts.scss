@@ -1,0 +1,63 @@
+/* ------------------------------------------------------------ *\
+	Fonts
+\* ------------------------------------------------------------ */
+
+/*
+Basis Grotesque: [
+400: Regular,
+700: Bold
+]
+*/
+
+@font-face {
+	font-family: 'Basis Grotesque';
+	src: url('../fonts/BasisGrotesque-Regular.woff2') format('woff2'),
+			 url('../fonts/BasisGrotesque-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Basis Grotesque';
+	src: url('../fonts/BasisGrotesque-Bold.woff2') format('woff2'),
+			 url('../fonts/BasisGrotesque-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+/*
+GT America: [
+300: Light,
+500: Medium,
+700: Bold
+]
+*/
+
+@font-face {
+	font-family: 'GT America';
+	src: url('../fonts/GTAmerica-ExtLt.woff2') format('woff2'),
+			 url('../fonts/GTAmerica-ExtLt.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'GT America';
+	src: url('../fonts/GTAmerica-ExtMd.woff2') format('woff2'),
+			 url('../fonts/GTAmerica-ExtMd.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'GT America';
+	src: url('../fonts/GTAmerica-ExtBd.woff2') format('woff2'),
+			 url('../fonts/GTAmerica-ExtBd.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}

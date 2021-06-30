@@ -1,0 +1,62 @@
+/* ------------------------------------------------------------ *\ 
+	- Btn Link Secondary
+\* ------------------------------------------------------------ */
+
+.btn-link-secondary {
+	font-size: 0; 
+	line-height: 0; 
+	color: $c-primary;
+
+	.ico-arrow {
+		width: 9px; 
+		height: 9px; 
+		vertical-align: middle;
+		left: 0; 
+		transition: left $t-duration;
+		margin-top: -1px;
+
+		path {
+			fill: $c-primary;
+		}
+	}
+
+	& > * {
+		display: inline-block; 
+		vertical-align: middle; 
+	}
+
+	& > span {
+		font-size: 14px; 
+		line-height: 20px;
+	}
+
+	& > *:not(:last-child) {
+		margin-right: 5px;
+	}
+
+	@media (hover: hover), (-ms-high-contrast: none) {
+		&:hover .ico-arrow:first-child {
+			left: -5px; 
+		}
+	}
+
+	@media (hover: hover), (-ms-high-contrast: none) {
+		&:hover .ico-arrow:last-child {
+			left: 5px; 
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\ 
+	-- Colors
+\* ------------------------------------------------------------ */
+
+.btn-link-secondary--color-white {
+	color: white;
+
+	.ico-arrow {
+		path {
+			fill: white;
+		}
+	}
+}

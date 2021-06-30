@@ -1,0 +1,26 @@
+/* ------------------------------------------------------------ *\ 
+	- List Search
+\* ------------------------------------------------------------ */
+
+.list-search {
+	.list__body {
+		width: 100%; 
+
+		& > ul > li {
+			width: 100%;
+
+			&:not(:last-child) {
+				margin-bottom: 30px; 
+			} 
+		}
+	}
+
+	.list__actions {
+		width: 100%; 
+		margin-top: 79px; 
+
+		@include breakpoint-down(mobile) {
+			margin-top: 50px; 
+		}
+	}
+}

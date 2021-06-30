@@ -1,0 +1,121 @@
+/* ------------------------------------------------------------ *\
+WP Gutenberg
+\* ------------------------------------------------------------ */
+
+.mfp-fade {
+	&.mfp-bg {
+		opacity: 0;
+		transition: opacity $t-duration;
+	}
+	
+	&.mfp-bg.mfp-ready {
+		opacity: 0.8;
+	}
+	
+	&.mfp-bg.mfp-removing {
+		opacity: 0;
+	}
+
+	&.mfp-wrap .mfp-content {
+		opacity: 0;
+		transition: opacity $t-duration;
+	}
+	
+	&.mfp-wrap.mfp-ready .mfp-content {
+		opacity: 1;
+	}
+	
+	&.mfp-wrap.mfp-removing .mfp-content {
+		opacity: 0;
+	}
+}
+
+body {
+	.mfp-container {
+		padding: 0; 
+	}
+
+	.mfp-bg {
+		background-color: white; 
+	}
+
+	.mfp-bg ~ .wrapper {
+		filter: blur(5px);
+	}
+
+	.mfp-close {	
+		position: absolute; 
+		right: 20px; 
+		top: 20px !important; 
+		width: 33px; 
+		height: 33px; 
+		font-size: 0; 
+		line-height: 0; 
+		text-indent: -4000px;
+		opacity: 1;
+		background-color: white; 
+
+		&:before,
+		&:after {
+			content: ' ';
+			position: absolute; 
+			left: 10px; 
+			right: 10px; 
+			height: 2px;
+			margin-top: -1px;
+			background-color: $c-primary; 
+		}
+
+		&:before {
+			transform: rotate(45deg);
+		}
+
+		&:after {
+			transform: rotate(-45deg);
+		}
+
+		@media (hover: hover), (-ms-high-contrast: none) {
+			&:hover {
+				transform: rotate(360deg);
+			}
+		}
+	}
+
+	.mfp-close--white {
+		background-color: transparent;
+		right: 10px; 
+		top: 10px !important;
+
+		@include breakpoint-down(mobile) {
+			border: 1px solid black;
+		}
+
+		&:before,
+		&:after {
+			background-color: white;
+
+			@include breakpoint-down(mobile) {
+			 	background-color: black; 
+			 	left: 7px; 
+			 	right: 7px;
+			} 
+		} 
+	}
+
+	.mfp-container .main {
+		width: 100%; 
+		max-width: 1200px;
+		display: block; 
+		margin-left: auto; 
+		margin-right: auto; 
+		position: relative;
+	}
+}
+
+body.page-template-home {
+	.mfp-container {
+		.main {
+			max-width: 990px;
+		}
+	}
+}

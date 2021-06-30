@@ -1,0 +1,118 @@
+/* ------------------------------------------------------------ *\ 
+	- List Articles
+\* ------------------------------------------------------------ */
+
+.list-articles {
+	width: 100%;
+	position: relative; 
+
+	.list__filter {
+		margin-bottom: 80px;
+		min-height: 76px;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 50px;
+		}
+	}
+
+	.list__body {
+		width: 100%;
+		position: relative; 
+		overflow: hidden; 
+
+		& > ul {
+			display: flex; 
+			flex-wrap: wrap;
+			position: relative; 
+			margin: -40px -20px; 
+
+			@include breakpoint-down(mobile) {
+				margin: -20px;
+			}
+		} 
+
+		& > ul > li {
+			width: 33.333%;
+			padding: 40px 20px; 
+
+			@include breakpoint-down(tablet-portrait) {
+				width: 50%; 
+			}
+
+			@include breakpoint-down(mobile) {
+				width: 100%;
+				padding: 20px;  
+			}
+		} 
+	}
+
+	.list__actions {
+		width: 100%;
+
+		&:not(:first-child) {
+			margin-top: 80px;
+
+			@include breakpoint-down(mobile) {
+				margin-top: 50px;
+			}
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\ 
+	-- Recent
+\* ------------------------------------------------------------ */
+
+.list-articles--recent {
+	.nav-pagination {
+		& > ul {
+			justify-content: flex-start;
+		}
+	}
+
+	.list__body {
+		& > ul {
+			margin: 0;
+		}
+
+		& > ul > li {
+			padding: 0; 
+			width: 100%;
+			margin-bottom: 80px;
+
+			@include breakpoint-down(mobile) {
+				margin-bottom: 50px;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\ 
+	-- Main
+\* ------------------------------------------------------------ */
+
+.list-articles--main {
+	.nav-pagination {
+		& > ul {
+			justify-content: flex-start;
+
+			@include breakpoint-down(mobile) {
+				justify-content: center;
+			}
+		}
+	}	
+
+	.list__body {
+		& > ul {
+			margin: -20px; 
+		}
+
+		& > ul > li {
+			padding: 20px; 
+		}
+	}
+}

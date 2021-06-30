@@ -1,0 +1,50 @@
+/* ------------------------------------------------------------ *\ 
+	- Nav Share
+\* ------------------------------------------------------------ */
+
+.nav-share {
+	display: flex; 
+	align-items: center;
+	justify-content: center;
+
+	@include breakpoint-down(mobile-small) {
+		display: block;
+		text-align: center;
+	}
+
+	p {
+		margin-bottom: 0; 
+		margin-right: 50px;
+		font-size: 21px; 
+		font-family: $ff-gt;
+		font-weight: 700;
+
+		@include breakpoint-down(mobile-small) {
+			margin-bottom: 12px;
+			margin-right: 0;
+			font-size: 18px; 
+		}
+	}
+
+	ul {
+		position: relative; 
+		margin: -13px; 
+
+		@include breakpoint-down(mobile-small) {
+			justify-content: center;
+		}
+	}
+
+	li {
+		padding: 13px; 
+		font-size: 21px; 
+		line-height: 1.00;
+	}
+
+	@media (hover: hover), (-ms-high-contrast: none) {
+		a:hover {
+			color: $c-secondary;
+			transform: scale(1.1) rotate(6deg);
+		}
+	}	
+}

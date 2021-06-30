@@ -1,0 +1,60 @@
+/* ------------------------------------------------------------ *\ 
+	- Section Slider
+\* ------------------------------------------------------------ */
+
+.section-slider {
+	position: relative; 
+	overflow: hidden; 
+	padding: 130px 0; 
+	background-color: black;
+	color: white; 
+	min-height: 640px;
+
+	@include breakpoint-down(mobile) {
+		min-height: calc(100vh - 58px);
+		padding: 93px 0 130px 0; 
+	}
+
+	.section__slider {
+		@include posAbsolute;
+	}
+
+	.section__content {
+		@include breakpoint-down(mobile) {
+			display: block; 
+			text-align: center;
+		}
+
+		h1 {
+			margin-bottom: 21px;
+			text-shadow: 0 0 10px color(black a(20%));
+			line-height: 0.93;
+		}
+
+		blockquote {
+			width: 100%;
+
+			@include breakpoint-down(mobile) {
+				display: flex; 
+				flex-direction: column;
+				min-height: calc(100vh - 293px);
+			}
+
+			& > *:last-child {
+				margin-bottom: 0;
+			} 
+		}
+
+		p {
+			@include breakpoint-down(mobile) {
+				width: 100%; 
+				margin-top: auto; 
+				align-self: flex-end;
+			}			
+		}
+
+		.btn {
+			min-width: 192px;
+		}
+	}
+}

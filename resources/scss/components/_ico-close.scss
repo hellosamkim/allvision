@@ -1,0 +1,46 @@
+/* ------------------------------------------------------------ *\ 
+	- Ico Close
+\* ------------------------------------------------------------ */
+
+.ico-close {
+	width: inherit;
+	height: inherit;
+	transition: transform $t-duration;
+
+	&:before,
+	&:after {
+		content: ' ';
+		position: absolute; 
+		left: 0; 
+		right: 0; 
+		top: 50%;
+		height: 2px;
+		background-color: $c-primary;
+		margin-top: -1px;  
+		transition: background $t-duration;
+	}
+
+	&:before {
+		transform: rotate(45deg);
+	}
+
+	&:after {
+		transform: rotate(-45deg);
+	}
+}
+
+/* ------------------------------------------------------------ *\ 
+	- Hover
+\* ------------------------------------------------------------ */
+
+@media (hover: hover), (-ms-high-contrast: none) {
+	a:hover .ico-close,
+	button:hover .ico-close {
+		transform: rotate(360deg);
+
+		&:before,
+		&:after {
+			background-color: $c-secondary; 
+		}
+	}
+}

@@ -1,0 +1,52 @@
+/* ------------------------------------------------------------ *\ 
+	- Block Author
+\* ------------------------------------------------------------ */
+
+.block-author {
+	display: flex; 
+	align-items: center;
+
+	@include breakpoint-down(mobile) {
+		display: block; 
+	}
+
+	.block__image {
+		width: 34px;
+		max-width: 34px;
+		min-width: 24px;
+		margin-right: 15px;
+
+		@include breakpoint-down(mobile) {
+			margin-right: 0; 
+			margin-bottom: 15px;
+		}
+
+		img {
+			display: block; 
+			width: 100%;
+			height: auto; 
+		} 
+	}
+
+	.block__body {
+		font-size: 14px; 
+		line-height: 1.36;
+		font-weight: 700;
+
+		h6 {
+			margin-bottom: 0; 
+			font-size: 14px; 
+			line-height: 1.36;
+			font-family: $ff-sans-serif;
+			font-weight: 700;
+		}
+
+		p {
+			color: #939393;	
+		}
+
+		& > *:last-child {
+			margin-bottom: 0; 
+		}
+	}
+}

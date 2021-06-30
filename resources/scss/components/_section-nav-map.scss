@@ -1,0 +1,28 @@
+/* ------------------------------------------------------------ *\ 
+	- Section Nav Map
+\* ------------------------------------------------------------ */
+
+.section-nav-map {
+	background-color: #f5f5f5; 
+	overflow: hidden; 
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	position: fixed; 
+	left: 0; 
+	right: 0; 
+	top: 64px;
+	z-index: 899; 
+	transition: box-shadow $t-duration;
+
+	body.show-fixed-header & {
+		box-shadow: 0 0 12px color(black a(20%));
+	}
+
+	@include breakpoint-down(mobile) {
+	 	top: 58px; 
+	 } 
+
+	& + * {
+		margin-top: 58px;
+	}
+}

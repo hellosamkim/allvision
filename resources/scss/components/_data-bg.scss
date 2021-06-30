@@ -1,0 +1,24 @@
+/* ------------------------------------------------------------ *\ 
+	- Data backgrounds
+\* ------------------------------------------------------------ */
+
+[data-bg="gray"] {
+	background-color: #fafafa; 
+}
+
+[data-bg="white"] {
+	background-color: white; 
+}
+
+[data-bg="blue"] {
+	background-color: $c-secondary;
+	color: white;  
+}
+
+[data-bg="white-desktop-dark-mobile"] {
+	background-color: white; 	
+
+	@include breakpoint-down(mobile) {
+		background-color: #fafafa; 
+	}
+}

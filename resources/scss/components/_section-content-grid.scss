@@ -1,0 +1,64 @@
+/* ------------------------------------------------------------ *\ 
+	- Section Content Grid
+\* ------------------------------------------------------------ */
+
+.section-content-grid {
+	padding: 100px 0;
+	overflow: hidden; 
+
+	@include breakpoint-down(mobile) {
+		padding: 50px 0;
+	}
+
+	.section__body-row {
+		display: flex; 
+		flex-wrap: wrap;
+		position: relative; 
+		width: auto; 
+		margin: -40px; 
+
+		@include breakpoint-down(tablet-portrait) {
+			margin: -20px; 
+		}
+
+		@include breakpoint-down(mobile) {
+			margin: 0; 
+			text-align: center;
+		}
+	}
+
+	.section__body-col {
+		width: 50%;
+		flex-grow: 1; 
+		padding: 40px;
+
+		@include breakpoint-down(tablet-portrait) {
+			padding: 20px;
+		}
+
+		@include breakpoint-down(mobile) {
+			width: 100%;
+			padding: 0; 
+
+			&:not(:last-child) {
+				margin-bottom: 20px; 
+			}
+		}
+
+		br {
+			@include breakpoint-down(mobile) {
+				display: none; 	
+			}
+		}
+		
+		& > blockquote {
+			position: sticky; 
+			top: 80px;
+
+			@include breakpoint-down(mobile) {
+			 	position: relative; 
+			 	top: 0; 
+			 } 
+		} 
+	}
+}

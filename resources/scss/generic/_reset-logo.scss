@@ -1,0 +1,18 @@
+/* ------------------------------------------------------------ *\
+	Reset Logos
+\* ------------------------------------------------------------ */
+
+[class^="logo"] {
+	font-size: 0;
+	line-height: 0;
+	text-indent: -4004px;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	text-decoration: none;
+
+	& > img {
+		display: block;
+		width: 100%;
+	}
+}

@@ -1,0 +1,228 @@
+/* ------------------------------------------------------------ *\
+	Header
+\* ------------------------------------------------------------ */
+
+.header {
+	width: 100%;
+	position: fixed; 
+	left: 0; 
+	right: 0; 
+	top: 0; 
+	z-index: 900;
+	padding: 13px 0;
+	background-color: white;
+	transition: box-shadow $t-duration;
+
+	body.show-fixed-header & {
+		box-shadow: 0 0 12px color(black a(20%));
+	}
+
+	.shell--grid {
+		padding-left: 40px; 
+		padding-right: 40px;
+		align-items: center;
+
+		@include breakpoint-down(mobile) {
+			padding-left: 20px; 
+			padding-right: 20px; 
+		}
+	}
+
+	& + * {
+		margin-top: 64px;
+
+		@include breakpoint-down(mobile) {
+			margin-top: 58px;
+		}
+	}
+
+	.header__logo {
+		display: flex; 
+		align-items: center;
+		margin-right: auto; 
+
+		@include breakpoint-down(mobile) {
+			max-width: 193px;
+			min-width: 193px;
+		}
+
+		& > *:not(:last-child) {
+			margin-right: 30px;
+		}
+
+		.slogan {
+			@include breakpoint-down(mobile) {
+				display: none; 
+			}
+		}
+	}
+
+	.header__inner {
+		display: flex; 
+		align-items: center;
+		justify-content: flex-end;
+		position: relative; 
+
+		.form-search {
+			position: absolute; 
+			left: 0; 
+			right: 0; 
+			top: 50%;
+			transform: translateY(-50%);
+			background-color: white;
+			z-index: 100;  
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity $t-duration, visibility $t-duration;
+
+			@include breakpoint-down(medium-desktop) {
+				display: none;
+			}
+
+			body.show-search & {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+
+		& > *:not(:last-child):not(.form-search) {
+			margin-right: 30px;
+
+			@include breakpoint-down(medium-desktop) {
+				margin-right: 0;
+				margin-bottom: 20px;
+			}
+		}
+
+		&:not(:last-child) {
+			margin-right: 30px;
+
+			@include breakpoint-down(medium-desktop) {
+				margin-right: 0;
+			}
+		}
+
+		@include breakpoint-down(medium-desktop) {
+			position: fixed; 
+			left: 0; 
+			right: 0; 
+			top: 64px; 
+			bottom: 0;
+			display: block; 
+			background-color: white;
+			overflow: hidden; 
+			overflow-y: auto; 
+			-webkit-overflow-scrolling: touch;
+			z-index: 100; 
+			text-align: center; 
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity $t-duration, visibility $t-duration; 
+
+			body.show-nav-main & {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+
+		@include breakpoint-down(mobile) {
+			top: 58px;
+			padding: 50px 0; 
+		}
+
+		.btn {
+			display: none; 
+
+			@include breakpoint-down(mobile) {
+				display: inline-block; 
+			}
+		}
+
+		.slogan {
+			display: none; 
+
+			@include breakpoint-down(mobile) {
+				display: flex; 
+				justify-content: center;
+			}
+		}
+
+		.btn-search {
+			@include breakpoint-down(medium-desktop) {
+				display: none; 
+			}	
+		}
+	}
+
+	.header__actions {
+		font-size: 0; 
+		line-height: 0; 
+
+		@include breakpoint-down(medium-desktop) {
+			& > *:not(:last-child) {
+				margin-right: 30px;
+			}
+		}
+
+		@include breakpoint-down(mobile) {
+			& > *:not(:last-child) {
+				margin-right: 15px;
+			}	
+		}
+
+		.btn-search,
+		.btn-menu {
+			display: none;
+
+			@include breakpoint-down(medium-desktop) {
+				display: inline-block;
+			}
+		}
+
+		.btn {
+			@include breakpoint-down(mobile) {
+				display: none; 
+			}
+		}
+	}
+
+	.header__form {
+		display: none; 
+		position: fixed; 
+		left: 0; 
+		right: 0; 
+		top: 64px;
+		background-color: white; 
+		padding: 20px 40px; 
+		box-shadow: 0 6px 6px color(black a(10%));
+		transition: opacity $t-duration, visibility $t-duration; 
+		opacity: 0;
+		visibility: hidden;
+
+		@include breakpoint-down(medium-desktop) {
+			display: block; 
+
+			body.show-search & {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+
+		@include breakpoint-down(mobile) {
+			top: 58px; 
+			padding-top: 0;
+			padding-left: 20px; 
+			padding-right: 20px;
+		}
+	}
+}
+
+body.admin-bar {
+	.header {
+		margin-top: 32px;
+
+		@include breakpoint-down(admin-bar) {
+			margin-top: 46px;
+		}
+	}
+}

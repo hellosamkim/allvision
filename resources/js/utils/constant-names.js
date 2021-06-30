@@ -1,0 +1,17 @@
+export default {
+	Hover:           'hover',
+	Active:          'active',
+	UnActive:        'unactive',
+	Open:            'open',
+	IsTouch:         'is-touch',
+	IsIos:           'is-ios',
+	IsIE:            'is-ie',
+	IsEdge:          'is-edge',
+	ShowFixedHeader: 'show-fixed-header',
+	ShowNavMain:     'show-nav-main',
+	ShowSearch:      'show-search',
+	ShowFilters:     'show-filters',
+	ShowFixedFilter: 'show-fixed-filter',
+	ShowPopup:       'show-popup',
+	PageLoaded:      'page-loaded',
+};

@@ -1,0 +1,25 @@
+/* ------------------------------------------------------------ *\ 
+	- Section Image
+\* ------------------------------------------------------------ */
+
+.section-image {
+	overflow: hidden; 
+
+	.section__body {
+		max-width: 1366px;
+		margin-left: auto; 
+		margin-right: auto; 
+		overflow: hidden;
+		min-height: 500px;
+
+		@include breakpoint-down(mobile) {
+			min-height: 40vh;
+		}
+
+		span {
+			@include posAbsolute;
+
+			bottom: -200px;
+		} 
+	}
+}

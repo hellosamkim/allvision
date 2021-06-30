@@ -1,0 +1,53 @@
+/* ------------------------------------------------------------ *\ 
+	- Accordion Search
+\* ------------------------------------------------------------ */
+
+.accordion-search {
+	display: flex; 
+	align-items: center;
+	background-color: #fafafa;
+	position: relative; 
+	overflow: hidden;
+	width: 100%;  
+	transition: background $t-duration;
+
+	@include breakpoint-down(mobile) {
+		flex-wrap: wrap;
+	}
+
+	@media (hover: hover), (-ms-high-contrast: none) {
+		&:hover {
+			background-color: #f5f5f5; 
+		}
+	}
+
+	.accordion__body {
+		flex-grow: 1;
+		padding: 30px; 
+		width: 100%; 
+
+		@include breakpoint-down(mobile) {
+			order: 2
+		}
+
+		h4 {
+			font-weight: 500;
+		}
+	}
+
+	.accordion__image {
+		width: 374px;
+		min-width: 374px;
+
+		@include breakpoint-down(mobile) {
+			min-width: 100%;
+			min-width: 100%;
+		}
+
+		img {
+			display: block; 
+			width: 100%;
+			height: auto;  
+		} 
+	}
+}

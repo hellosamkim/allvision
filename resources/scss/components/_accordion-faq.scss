@@ -1,0 +1,159 @@
+/* ------------------------------------------------------------ *\ 
+	- Accordion Faq
+\* ------------------------------------------------------------ */
+
+.accordion-faq {
+	width: 100%;
+
+	.accordion__group {
+		background-color: $c-secondary;
+		color: white;
+		transition: background $t-duration, color $t-duration; 
+		width: 100%;
+
+		&:not(:last-child) {
+			margin-bottom: 30px;
+
+			@include breakpoint-down(mobile) {
+				margin-bottom: 15px; 
+			}
+		}
+		
+		&.active {
+			background-color: #fafafa;
+			color: black; 
+
+			.accordion__head {
+				&:after {
+					border-top-color: black; 
+					transform: rotate(180deg);
+				}
+			}
+
+			.accordion__body {
+				opacity: 1;
+				visibility: visible;
+				padding-bottom: 30px; 
+				max-height: 9999px;
+
+				@include breakpoint-down(mobile) {
+					padding-bottom: 20px;
+				}
+			}
+		}
+	} 
+
+	.accordion__head {
+		padding: 30px;
+		display: flex; 
+		align-items: center;
+		cursor: pointer; 
+
+		@include breakpoint-down(mobile) {
+			padding: 20px;
+		}
+
+		h4 {
+			font-weight: 500;
+			letter-spacing: -0.63px;
+		}
+
+		&:after {
+			content: ' ';
+			width: 0; 
+			height: 0; 
+			border-left: 6px solid transparent;
+			border-right: 6px solid transparent; 
+			border-top: 6px solid white;
+			display: inline-block; 
+			vertical-align: middle; 
+			margin-left: 20px; 
+			transition: border $t-duration, transform $t-duration;
+		}
+	}
+
+	.accordion__body {
+		padding-left: 30px; 
+		padding-right: 30px; 
+		width: 100%;
+		position: relative; 
+		overflow: hidden; 
+		max-height: 0px;
+		opacity: 0;
+		visibility: hidden;
+		transition: padding $t-duration, opacity $t-duration, visibility $t-duration; 
+
+		@include breakpoint-down(mobile) {
+			padding-left: 20px; 
+			padding-right: 20px; 
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\ 
+	-- Secondary
+\* ------------------------------------------------------------ */
+
+.accordion-faq--secondary {
+	.active {
+		.accordion__head {
+			padding-bottom: 5px; 
+
+			&:before {
+				background-color: black; 
+				margin-top: 5px;
+			}
+		}
+	}
+
+	.accordion__group {
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}	
+
+		@include breakpoint-down(mobile) {
+			text-align: center; 
+		}	
+	}
+
+	.accordion__head {
+		position: relative; 
+		padding: 18px;
+		padding-left: 45px; 
+		transition: padding $t-duration;
+		display: block; 
+
+		@include breakpoint-down(mobile) {
+			padding-left: 18px; 
+		}
+
+		&:after {
+			display: none; 
+		}
+
+		&:before {
+			content: ' ';
+			position: absolute; 
+			left: 25px; 
+			top: 50%;
+			transform: translateY(-50%); 
+			width: 5px; 
+			height: 5px; 
+			background-color: white; 
+			margin-top: -1px;
+			transition: background $t-duration, margin $t-duration;
+
+			@include breakpoint-down(mobile) {
+				display: none; 
+			}
+		}
+	}
+
+	.accordion__body {
+		padding-left: 45px;
+
+		@include breakpoint-down(mobile) {
+			padding-left: 18px; 
+		}
+	}
+}

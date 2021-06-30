@@ -1,0 +1,13 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34 34">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="34" height="34" fill="none"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-path)">
+    <g id="Author_Photo" data-name="Author Photo">
+      <rect id="Rectangle_376" data-name="Rectangle 376" width="34" height="34" fill="#dedede"/>
+      <path id="Path_133" data-name="Path 133" d="M17.21,4.6c-4.06,0-7.35,3-7.35,8S12.6,23,17.21,23c5,0,7.35-5.26,7.35-10.34S21.27,4.6,17.21,4.6ZM9.86,23a7.34,7.34,0,0,0-7.35,7.33h0v3.33a.37.37,0,0,0,.35.35h28.7a.35.35,0,0,0,.34-.35V30.32A7.33,7.33,0,0,0,24.57,23s0,0,0,0H22.7a1.23,1.23,0,0,0-.62.2,7.94,7.94,0,0,1-4.87,1.63,7.58,7.58,0,0,1-4.7-1.63,1.17,1.17,0,0,0-.62-.2Z" fill="#9f9f9f"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,66 @@
+/* ------------------------------------------------------------ *\ 
+	- Section Single
+\* ------------------------------------------------------------ */
+
+.section-single {
+	padding: 140px 0; 
+
+	@include breakpoint-down(mobile) {
+		padding: 50px 0; 
+	}
+
+	.section__image {
+		position: absolute; 
+		right: 0; 
+		top: 0; 
+		bottom: 0;
+		width: 50%; 
+
+		@include breakpoint-down(mobile) {
+			position: relative; 
+			width: 100%; 
+			margin-bottom: 50px;
+			margin-top: -50px;
+		}
+
+		span {
+			@include posAbsolute;
+
+			background-attachment: fixed;
+			background-size: 50% auto;
+			background-position: right center; 
+
+			@include breakpoint-down(tablet) {
+				display: block;
+				position: sticky;
+				top: 64px; 
+				background-attachment: scroll;
+				background-size: cover;
+				background-position: center center; 
+				height: 0; 
+				padding-top: 100%; 
+			}
+
+			@include breakpoint-down(mobile) {
+				top: 0; 
+				position: relative; 
+			}
+		}
+	}
+
+	.section__body:not(:first-child) {
+		.post {
+			max-width: 50%;
+			padding-right: 80px;
+
+			@include breakpoint-down(tablet-portrait) {
+				padding-right: 40px; 
+			}
+
+			@include breakpoint-down(mobile) {
+				padding-right: 0; 
+				max-width: 100%;
+			}
+		}
+	}
+}

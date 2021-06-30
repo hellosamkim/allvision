@@ -1,0 +1,18 @@
+{
+    "type": "project",
+    "require": {
+        "erusev/parsedown": "^1.6",
+        "symfony/var-dumper": "~2.7"
+    },
+    "config": {
+        "secure-http": false,
+        "github-oauth": {
+            "github.com": "60c91b6cd016dc2947926b9fe71a17210ee6ca16"
+        }
+    },
+    "extra": {
+        "installer-paths": {
+            "vendor/{$vendor}/{$name}/": ["type:wordpress-plugin"]
+        }
+    }
+}

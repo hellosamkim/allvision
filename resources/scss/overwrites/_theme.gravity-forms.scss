@@ -1,0 +1,234 @@
+/* ------------------------------------------------------------ *\
+	Gravity Forms Reset
+\* ------------------------------------------------------------ */
+
+.gform_wrapper { 
+	width: 100%; 
+	position: relative; 
+	
+	li.hidden_label > label,
+	li.field_sublabel_hidden_label .ginput_complex span > label { 
+		position: absolute; 
+		left: -4000px;
+		opacity: 0; 
+	}
+
+	.btn {
+		@include breakpoint-down(mobile) {
+			display: block; 
+			width: 100%;
+		}
+	}
+
+	/*  Grid  */
+
+	.gform_body { 
+		width: 100%; 
+
+		& > ul {
+			display: flex; 
+			flex-wrap: wrap;
+			position: relative; 
+			margin: -15px -20px; 
+
+			@include breakpoint-down(tablet-portrait) {
+				margin: -10px; 
+			}
+		}
+
+		& > ul > li {
+			width: 50%;
+			padding: 15px 20px;
+			flex-grow: 1;  
+
+			@include breakpoint-down(tablet-portrait) {
+				padding: 10px; 
+			}
+
+			@include breakpoint-down(mobile) {
+				width: 100%; 
+			}
+		}
+
+		& > ul > li.gfield--small {
+			width: 33.333%;
+
+			@include breakpoint-down(tablet-portrait) {
+			 	width: 50%;
+			} 
+
+			@include breakpoint-down(mobile) {
+				width: 100%; 
+			}
+		}
+
+		& > ul > li.gfield--large {
+			width: 100%;
+		}
+	}
+	
+	.gform_body ul { 
+		list-style: none; 
+	}
+
+	.gform_heading { 
+		width: 100%; 
+		margin-bottom: 55px;
+		text-align: center;
+
+		@include breakpoint-down(mobile) {
+			text-align: left; 
+		}
+
+		h3 {
+			font-size: 46px; 
+			line-height: 1.09;
+
+			@include breakpoint-down(tablet-portrait) {
+				font-size: 36px;
+			}
+
+			@include breakpoint-down(mobile) {
+				font-size: 32px;
+			}			
+		}
+	}
+
+	.gform_footer { 
+		width: 100%; 
+		position: relative; 
+		text-align: right; 
+		margin-top: 30px;
+
+		@include breakpoint-down(mobile) {
+			text-align: left; 
+		}
+	}
+	
+	/*  Fields  */
+
+	.ginput_container input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+	.ginput_container select,
+	.ginput_container textarea {
+		width: 100%;
+		border: 1px solid transparent;
+		border-radius: 0;
+		background-color: #F7F7F7;
+		color: color(black a(50%));
+		padding: 0 20px;
+		font-size: 14px;
+		line-height: 1.10;    
+		height: 40px; 
+		transition: border $t-duration;
+		
+		&:focus {
+			border-color: $c-primary;
+			color: black; 
+		}
+	}
+
+	.ginput_container textarea {
+		resize: none;
+		display: block;
+		padding-top: 19px; 
+		padding-bottom: 19px;
+		height: 120px; 
+
+		@include breakpoint-down(mobile) {
+			height: 200px; 
+		}
+	}
+
+	.gfield {
+		& > label {
+			display: block; 
+			font-size: 12px; 
+			font-weight: 700;
+			margin-bottom: 9px;
+			text-transform: uppercase; 
+		}
+	}
+
+	.gfield--select {
+		.ginput_container {
+			position: relative; 
+			width: 100%;
+			
+			&:before {
+				content: ' ';
+				position: absolute; 
+				right: 20px; 
+				top: 50%;
+				width: 10px; 
+				height: 10px; 
+				border-left: 2px solid black;
+				border-top: 2px solid black;
+				transform: rotate(-135deg);   
+				margin-top: -7px;
+			}
+		}
+
+		select {
+			cursor: pointer;
+			appearance: none;
+			padding-right: 40px; 
+		}
+
+		select::-ms-expand {
+			display: none;
+		}
+	}
+	
+	/*  Messages  */
+
+	.gfield_error {
+		.ginput_container input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+		.ginput_container select,
+		.ginput_container textarea {
+			border-color: $c-red;
+		}		
+	}
+
+	.validation_error { 
+		border-top: 2px solid $c-red; 
+		border-bottom: 2px solid $c-red; 
+		padding: 10px; 
+		text-align: center; 
+		color: $c-red; 
+		margin-bottom: 20px; 
+	}
+	
+	.validation_message { 
+		background-color: $c-red; 
+		padding: 3px 20px; 
+		color: white; 
+		font-size: 12px; 
+	}
+	
+	.gform_ajax_spinner { 
+		position: absolute; 
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 24px; 
+		height: 24px; 
+		border-radius: 50%;  
+		pointer-events: none; 
+	}
+	
+	/*  Buttons  */
+
+	.button {
+		position: absolute; 
+		left: -4000px;
+		opacity: 0; 
+	}
+}
+
+/*  Confirmation  */
+
+.gform_confirmation_wrapper { 
+	text-align: center; 
+	padding: 10px; 
+	margin-bottom: 10px; 
+}

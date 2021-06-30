@@ -1,0 +1,78 @@
+/* ------------------------------------------------------------ *\ 
+	- Nav Map
+\* ------------------------------------------------------------ */
+
+.nav-map {
+	padding: 18px 0;
+
+	& > ul {
+		justify-content: center;
+		position: relative; 
+		margin: -5px -20px; 
+		flex-wrap: nowrap;
+		display: block; 
+		font-size: 0;
+		line-height: 0; 
+		text-align: center;  
+		white-space: nowrap;
+	}
+
+	& > ul > li {
+		padding: 5px 20px; 
+		font-family: $ff-gt;
+		font-weight: 300;
+		font-size: 14px; 
+		line-height: 1.71;
+		position: relative; 
+		display: inline-block; 
+		vertical-align: top;
+
+		&:not(:last-child):before {
+			content: ' ';
+			position: absolute; 
+			right: 0; 
+			top: 50%;
+			width: 1px;
+			height: 10px;
+			margin-top: -5px;
+			background-color: black;   
+		}
+
+		&.active > a {
+			color: $c-secondary;
+
+			&:before {
+				opacity: 1;
+				width: 100%; 
+			} 
+		}
+	}
+
+	a {
+		position: relative; 
+		white-space: nowrap;
+
+		&:before {
+			content: ' ';
+			position: absolute; 
+			left: 0;
+			bottom: 0;
+			height: 2px;
+			background-color: $c-secondary;
+			width: 0;
+			opacity: 0;
+			transition: width $t-duration, opacity $t-duration;   
+		}
+
+		@media (hover: hover), (-ms-high-contrast: none) {
+			&:hover {
+				color: $c-secondary;
+			}
+
+			&:hover:before {
+				opacity: 1;
+				width: 100%; 
+			}
+		}
+	}
+}

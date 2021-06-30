@@ -1,0 +1,91 @@
+/* ------------------------------------------------------------ *\ 
+	- Admin
+\* ------------------------------------------------------------ */
+
+body.login { 
+	background-color: #f1f2f2; 
+	font-size: 16px; 
+	line-height: 1.33; 
+	
+	div#login { 
+		display: flex; 
+		flex-wrap: wrap; 
+		width: auto; 
+		max-width: 400px;
+	
+		h1 { 
+			margin: 0 auto 20px; 
+			font-size: 0;
+			line-height: 0;
+		}
+		
+		h1 a {
+			display: inline-block; 
+			vertical-align: top; 
+			width: auto; 
+			height: auto; 
+			padding: 0; 
+			margin: 0 auto; 
+			text-indent: 0; 
+			font-size: 0; 
+			line-height: 0; 
+			background: url(../images/logo.svg) no-repeat 0 0; 
+			width: 193px; 
+			height: 23px; 
+			background-size: contain;
+		}
+
+		form { 
+			box-shadow: 6px 6px 0 color($c-primary a(20%)); 
+			background-color: $c-primary; 
+			color: white; 
+			width: 100%; 
+		}
+		
+		form p.submit input#wp-submit { 
+			background-color: $c-secondary; 
+			border-radius: 0; 
+			border: 0; 
+			text-shadow: none; 
+			opacity: 1; 
+		}
+
+		.message { 
+			box-shadow: 6px 6px 0 $c-primary; 
+			width: 100%; 
+		}
+
+		#nav { 
+			order: 3;
+			width: 50%;
+			padding: 0;
+			margin: 20px 0;
+			text-align: right;
+		}
+		
+		#nav a { 
+			color: $c-primary; 
+		}
+		
+		#backtoblog { 
+			width: 50%; 
+			padding: 0; 
+			margin: 20px 0; 
+		}
+		
+		#backtoblog a { 
+			color: $c-primary; 
+		}
+	}
+	
+	#login_error { 
+		width: 100%; 
+	}
+
+	@media (hover: hover), (-ms-high-contrast: none) {
+		div#login form p.submit input#wp-submit:hover,
+		div#login a:hover,
+		div#login #backtoblog a:hover,
+		div#login #nav a:hover { opacity: 0.75; }
+	}
+}

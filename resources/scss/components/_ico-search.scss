@@ -1,0 +1,32 @@
+/* ------------------------------------------------------------ *\ 
+	- Ico Search
+\* ------------------------------------------------------------ */
+
+.ico-search {
+	width: inherit;
+	height: inherit;
+
+	svg {
+		display: block; 
+		width: 100%;
+		height: auto; 
+	} 
+
+	path {
+		fill: $c-primary;
+		transition: fill $t-duration;
+	}
+}
+
+/* ------------------------------------------------------------ *\ 
+	- Hover
+\* ------------------------------------------------------------ */
+
+@media (hover: hover), (-ms-high-contrast: none) {
+	a:hover .ico-search,
+	button:hover .ico-search {
+		path {
+			fill: $c-secondary;
+		}
+	}
+}

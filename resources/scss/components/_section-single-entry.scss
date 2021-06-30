@@ -1,0 +1,17 @@
+/* ------------------------------------------------------------ *\ 
+	- Section single entry
+\* ------------------------------------------------------------ */
+
+.section-single-entry {
+	padding: 77px 0; 
+
+	@include breakpoint-down(mobile) {
+		padding: 50px 0;
+	}
+
+	.post {
+		max-width: 541px;
+		margin-left: auto; 
+		margin-right: auto;
+	}
+}

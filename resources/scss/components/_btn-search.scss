@@ -1,0 +1,51 @@
+/* ------------------------------------------------------------ *\ 
+	- Btn Search
+\* ------------------------------------------------------------ */
+
+.btn-search {
+	width: 13px; 
+	height: 13px; 
+	font-size: 0; 
+	line-height: 0; 
+	position: relative; 
+
+	&:before,
+	&:after {
+		content: ' ';
+		position: absolute; 
+		left: 0; 
+		right: 0; 
+		top: 50%;
+		height: 2px;
+		background-color: $c-primary; 
+		margin-top: -1px;  
+		opacity: 0;
+		transition: transform $t-duration, opacity $t-duration;
+	}
+
+	& > * {
+		pointer-events: none;
+		transition: opacity $t-duration;
+	}
+
+	@include breakpoint-down(mobile) {
+		body.show-search & {
+			&:before,
+			&:after {
+				opacity: 1;
+			}
+
+			&:before {
+				transform: rotate(45deg);
+			}
+
+			&:after {
+				transform: rotate(-45deg);
+			}
+
+			& > * {
+				opacity: 0;
+			}
+		}
+	}
+}

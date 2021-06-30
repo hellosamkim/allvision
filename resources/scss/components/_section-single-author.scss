@@ -1,0 +1,57 @@
+/* ------------------------------------------------------------ *\ 
+	- Section Single Author
+\* ------------------------------------------------------------ */
+
+.section-single-author {
+	padding: 88px 0; 
+
+	@include breakpoint-down(mobile) {
+		padding: 50px 0; 
+	}
+
+	.block-author {
+		position: sticky;
+		top: 84px;
+
+		@include breakpoint-down(mobile) {
+			position: relative;
+			top: 0;
+		}
+	}
+
+	.post {
+		max-width: 541px;
+		margin-left: auto; 
+		margin-right: auto;
+
+		@include breakpoint-down(mobile) {
+			max-width: 100%;
+		}
+	}
+
+	.section__body-holder {
+		padding: 0 212px; 
+
+		@include breakpoint-down(tablet-portrait) {
+			padding-right: 0;
+		}
+
+		@include breakpoint-down(mobile) {
+			padding-left: 0; 
+		}
+	}
+
+	.section__body-author {
+		position: absolute; 
+		left: 0; 
+		top: 0; 
+		bottom: 0;
+		width: 212px; 
+
+		@include breakpoint-down(mobile) {
+			position: relative; 
+			width: auto; 
+			margin-bottom: 30px;
+		}
+	}
+}

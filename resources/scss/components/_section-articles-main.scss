@@ -1,0 +1,13 @@
+/* ------------------------------------------------------------ *\ 
+	- Section Articles Main
+\* ------------------------------------------------------------ */
+
+.section-articles-main {
+	margin-bottom: 100px; 
+	overflow: hidden; 
+	z-index: 300;
+
+	@include breakpoint-down(mobile) {
+		margin-bottom: 50px;
+	}
+}

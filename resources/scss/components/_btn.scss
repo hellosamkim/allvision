@@ -1,0 +1,131 @@
+/* ------------------------------------------------------------ *\
+	Btn
+\* ------------------------------------------------------------ */
+
+.btn {
+	color: $c-white;
+	background: $c-secondary;
+	padding: 9px 20px;
+	font-size: 0; 
+	line-height: 0; 
+	min-width: 162px;
+	position: relative;
+	overflow: hidden;
+
+	.ico-arrow {
+		path {
+			fill: $c-white;
+		}
+	}
+
+	& > span {
+		display: block;
+	}
+
+	& > span > * {
+		display: inline-block; 
+		vertical-align: middle; 
+	}
+
+	& > span > * + * {
+		margin-left: 10px;
+	}
+
+	& > span > span {
+		font-size: 14px;
+		line-height: 20px; 
+		font-family: $ff-gt;
+		font-weight: 500;
+	}
+
+	& > span > i {
+		vertical-align: middle; 
+	}
+
+	& > span.btn__hover {
+		position: absolute; 
+		left: 0;
+		right: 0; 
+		top: 0; 
+		bottom: 0;
+		padding: inherit;
+		min-width: inherit;
+		background-color: $c-tertiary;  
+		transform: translateX(-101%);
+		transition: transform $t-duration;
+	}
+	
+	@media (hover: hover), (-ms-high-contrast: none) {		
+		&:hover > span.btn__hover {
+			transform: translateX(0%);
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\ 
+	-- Blocks
+\* ------------------------------------------------------------ */
+
+.btn--block {
+	display: block;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+/* ------------------------------------------------------------ *\ 
+	-- Sizes
+\* ------------------------------------------------------------ */
+
+.btn--size-large {
+	min-width: 189px;
+	padding: 15px 20px; 
+
+	.ico-arrow {
+		width: 14px;
+		height: 14px; 
+	}
+
+	& > span > span {
+		font-size: 16px;
+
+		@include breakpoint-down(mobile) {
+			font-size: 17px;
+		}
+	}
+
+	& > span > * + * {
+		margin-left: 12px;
+
+		@include breakpoint-down(mobile) {
+			margin-left: 10px;
+		}
+	}	
+}
+
+/* ------------------------------------------------------------ *\ 
+	-- Colors
+\* ------------------------------------------------------------ */
+
+.btn--color-gradient {
+	background: $gr-tertiary; 
+}
+
+.btn--color-white {
+	background: $c-white; 
+	color: $c-primary;
+
+	.ico-arrow {
+		path {
+			fill: $c-primary;
+		}
+	}	
+
+	& > span.btn__hover {
+		background-color: $c-primary;
+		color: $c-white; 
+	}
+
+	& > span.btn__hover .ico-arrow path {
+		fill: $c-white;
+	}
+}

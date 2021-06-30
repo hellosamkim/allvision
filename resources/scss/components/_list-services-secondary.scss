@@ -1,0 +1,72 @@
+/* ------------------------------------------------------------ *\ 
+	- List Services Secondary
+\* ------------------------------------------------------------ */
+
+.list-services-secondary {
+	width: 100%;
+	position: relative; 
+	overflow: hidden; 
+	 
+	& > ul {
+		display: flex; 
+		flex-wrap: wrap;
+		margin: -20px;
+		justify-content: center; 
+
+		@include breakpoint-down(mobile) {
+			margin: -10px; 
+		}
+	}
+
+	& > ul > li {
+		width: 33.333%;
+		padding: 20px; 
+
+
+		@include breakpoint-down(mobile) {
+			width: 100%; 
+			padding: 10px;
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\ 
+	-- Grid
+\* ------------------------------------------------------------ */
+
+.list-services-secondary--1of2 {
+	& > ul > li {
+		width: 50%;
+
+		@include breakpoint-down(mobile) {
+			width: 100%;
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\ 
+	-- Grid
+\* ------------------------------------------------------------ */
+
+.list-services-secondary--1of5 {
+	& > ul {
+		margin: -15px; 
+	}
+
+	& > ul > li {
+		width: 20%;
+		padding: 15px; 
+
+		@include breakpoint-down(small-desktop) {
+			width: 33.333%;
+		}
+
+		@include breakpoint-down(mobile) {
+			width: 100%;
+		}
+	}
+
+	.block-services {
+		padding: 20px; 
+	}
+}

@@ -1,0 +1,72 @@
+/* ------------------------------------------------------------ *\
+	Helpers
+\* ------------------------------------------------------------ */
+
+/*  Clear  */
+
+.clear:after {
+	content: '';
+	line-height: 0;
+	display: table;
+	clear: both;
+}
+
+/* Sr-only */
+
+.sr-only { 
+	position: fixed; 
+	left: 0; 
+	top: 0; 
+	padding: 4px 10px; 
+	border: 0; 
+	background-color: $c-primary; 
+	color: white; 
+	opacity: 0; 
+	visibility: hidden; 
+	z-index: 9999; 
+	transition: opacity $t-duration, visibility $t-duration; 
+	width: auto; 
+	height: auto; 
+	clip: initial;
+	text-decoration: none;
+	box-shadow: 4px 4px 0px color($c-primary a(50%));
+
+	&:focus,
+	&:active {
+		opacity: 1; 
+		visibility: visible;
+	}
+
+	@media (hover: hover), (-ms-high-contrast: none) {
+		&:hover {
+			opacity: 0.75; 
+		}
+	}	
+}
+
+/*  Hidden  */
+
+[hidden],
+.hidden {
+	display: none;
+}
+
+/*  Disabled  */
+
+[disabled],
+.disabled {
+	cursor: default;
+}
+
+.alignleft {
+	float: left; 
+}
+
+.alignright {
+	float: right; 
+}
+
+.aligncenter {
+	margin-left: auto; 
+	margin-right: auto; 
+}

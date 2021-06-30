@@ -1,0 +1,28 @@
+/* ------------------------------------------------------------ *\ 
+	- Section Slider Brands
+\* ------------------------------------------------------------ */
+
+.section-slider-brands {
+	padding: 97px 0;
+
+	@include breakpoint-down(mobile) {
+		padding: 50px 0; 
+	} 
+
+	.section__head {
+		text-align: center; 
+
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+
+		h3 {
+			letter-spacing: -0.96px;
+		}
+	}
+
+	.slides {
+		display: flex; 
+		align-items: center;
+	}
+}

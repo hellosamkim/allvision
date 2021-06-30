@@ -1,0 +1,45 @@
+$font-size-base             : 16px;
+$font-weight-base           : 400;
+$line-height-base           : 1.50;
+
+$ff-sans-serif              : 'Basis Grotesque', Helvetica, Arial, sans-serif;
+$ff-serif                   : Georgia, 'Times New Roman', Times, serif;
+$ff-gt                      : 'GT America', sans-serif;
+
+$t-duration                 : 0.4s;
+
+$shell-max-width            : 1200px;
+$shell-max-width-small      : 788px;
+$shell-gutter               : 15px;
+
+$grid-gutter                : 40px;
+$grid-gutter-tablet         : 30px;
+$grid-gutter-mobile         : 20px;
+
+$c-black                    : #000;
+$c-white                    : #fff;
+$c-primary                  : #000;    // Black
+$c-secondary                : #22b2e6; // Blue Primary
+$c-tertiary                 : #0074e8; // Blue Secondary
+$c-quaternary               : #939393; // Gray
+$c-red                      : #ff0000;
+
+$gr-primary                 : linear-gradient(to right, $c-secondary 0%, #0a84ff 100%);
+$gr-secondary               : linear-gradient(to right, $c-secondary 0%, $c-tertiary 100%);
+$gr-secondary-reverse       : linear-gradient(to right, $c-tertiary 0%, $c-secondary 100%);
+$gr-tertiary                : radial-gradient(ellipse at center, rgba(34,178,230,1) 0%,rgba(0,116,232,1) 100%);
+$gr-quaternary              : radial-gradient(ellipse at center, rgba(0,116,232,1) 0%, rgba(34,178,230,1) 100%);
+
+$responsive-ios             : 812px;
+
+$breakpoints: (
+	mobile-small:    374px,
+	mobile-medium:   575px,
+	mobile:          767px,
+	admin-bar:       782px,
+	tablet-portrait: 984px,
+	tablet:          1024px,
+	small-desktop:   1199px,
+	medium-desktop:  1299px,
+	large-desktop:   1399px
+);

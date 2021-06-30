@@ -1,0 +1,69 @@
+/* ------------------------------------------------------------ *\ 
+	- Slogan
+\* ------------------------------------------------------------ */
+
+.slogan {
+	display: flex; 
+	align-items: center;
+	font-size: 0; 
+	line-height: 0;
+	text-decoration: none;
+
+	@media (hover: hover), (-ms-high-contrast: none) {
+	 	&:hover {
+	 		color: $c-secondary;
+
+	 		path,
+	 		rect {
+	 			fill: $c-secondary;
+	 		}
+
+	 		img {
+	 			opacity: 0;
+	 		}
+
+	 		img + img {
+	 			opacity: 1;
+	 		}
+	 	}
+	} 
+
+	i {
+		width: 15px; 
+		min-width: 15px;
+		max-width: 15px;
+		margin-right: 6px;
+		display: inline-block; 
+		font-size: 0; 
+		line-height: 0; 
+		position: relative;
+	}
+
+	img {
+		display: block; 
+		width: 100%;
+		height: auto; 
+		transition: opacity $t-duration;
+	}
+
+	img + img {
+		position: absolute; 
+		left: 0; 
+		top: 0; 
+		opacity: 0;
+	}
+
+	span {
+		display: inline-block; 
+		font-size: 12px; 
+		line-height: 14px;
+		font-family: $ff-gt; 
+		font-weight: 300;
+	}
+
+	path,
+	rect {
+		fill: black;
+		transition: fill $t-duration; 
+	}
+}

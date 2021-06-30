@@ -1,0 +1,30 @@
+/* ------------------------------------------------------------ *\ 
+	- Btn Close
+\* ------------------------------------------------------------ */
+
+.btn-close {
+	width: 33px; 
+	height: 33px; 
+	border: 1px solid black;
+	background-color: white;
+
+	&:before,
+	&:after {
+		content: ' ';
+		position: absolute; 
+		left: 7px; 
+		right: 7px; 
+		height: 2px;
+		background-color: black;
+		margin-top: -1px;  
+		top: 50%; 
+	} 
+
+	&:before {
+		transform: rotate(-45deg);
+	}
+
+	&:after {
+		transform: rotate(45deg);
+	}
+}

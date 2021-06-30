@@ -1,0 +1,164 @@
+/* ------------------------------------------------------------ *\
+	Base
+\* ------------------------------------------------------------ */
+
+body {
+	min-width: 320px;
+	background: #fff;
+	font-family: $ff-sans-serif;
+	font-weight: $font-weight-base;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	color: $c-primary;
+
+	@include breakpoint-down(medium-desktop) {
+		&.show-nav-main {
+			position: relative;
+			overflow: hidden;
+		}
+	}
+}
+
+a {
+	color: inherit;
+	text-decoration: underline;
+	
+	&[href^="tel"] {
+		text-decoration: none;
+	}
+
+	@media (hover: hover), (-ms-high-contrast: none) {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+
+.h1,
+h1,
+.h2,
+h2,
+.h3,
+h3,
+.h4,
+h4,
+.h5,
+h5,
+.h6,
+h6 {
+	margin-bottom: calc(#{$line-height-base}em / 2);
+	font-weight: 700;
+	letter-spacing: -0.3px;
+	font-family: $ff-gt;
+	font-weight: 700;
+}
+
+.h1,
+h1 {
+	font-size: 72px; 
+	line-height: 1.10;
+
+	@include breakpoint-down(tablet-portrait) {
+		font-size: 57px;
+	}
+
+	@include breakpoint-down(mobile) {
+		font-size: 43px;
+		line-height: 1.05;
+	}
+}
+
+.h2,
+h2 {
+	font-size: 46px; 
+	line-height: 1.09;
+	letter-spacing: -1.38px;
+
+	@include breakpoint-down(tablet-portrait) {
+		font-size: 36px;
+	}
+
+	@include breakpoint-down(mobile) {
+		font-size: 30px;
+		line-height: 1.13;
+	}
+}
+
+.h3,
+h3 {
+	font-size: 32px; 
+	line-height: 1.25;
+
+	@include breakpoint-down(mobile) {
+		font-size: 30px;
+	}
+}
+
+.h4,
+h4 {
+	font-size: 21px; 
+	line-height: 1.43;
+}
+
+.h5,
+h5 {
+	font-size: 21px; 
+	line-height: 1.43;
+
+	@include breakpoint-down(tablet-portrait) {
+		font-size: 16px;
+	}
+
+	@include breakpoint-down(mobile) {
+		font-size: 14px; 
+	}
+}
+
+.h6,
+h6 {
+	font-size: 16px; 
+	line-height: 1.63;
+
+	@include breakpoint-down(mobile) {
+		font-size: 14px;
+	}
+}
+
+p,
+ul,
+ol,
+dl,
+hr,
+table,
+blockquote {
+	margin-bottom: #{$line-height-base}em;
+}
+
+h1[class],
+h2[class],
+h3[class],
+h4[class],
+h5[class],
+h6[class],
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+p:last-child,
+ul:last-child,
+ol:last-child,
+dl:last-child,
+table:last-child,
+blockquote:last-child {
+	margin-bottom: 0;
+}
+
+a,
+button,
+input[type="submit"],
+input[type="button"] { 
+	transition: color $t-duration, background $t-duration, opacity $t-duration, transform $t-duration, box-shadow $t-duration, border $t-duration; 
+}

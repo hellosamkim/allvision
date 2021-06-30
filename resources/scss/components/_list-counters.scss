@@ -1,0 +1,50 @@
+/* ------------------------------------------------------------ *\ 
+	- List Counters
+\* ------------------------------------------------------------ */
+
+.list-counters {
+	& > ul {
+		display: flex; 
+		flex-wrap: wrap;
+		position: relative; 
+		margin: -30px -65px; 
+		justify-content: center;
+	}
+
+	& > ul > li {
+		padding: 30px 65px; 
+
+		@include breakpoint-down(mobile) {
+			width: 100%; 
+		}
+
+		& > *:last-child {
+			margin-bottom: 0; 
+		}
+	}
+
+	h2 {
+		display: flex; 
+		align-items: center;
+		margin-bottom: 12px;
+		justify-content: center;
+
+		&:before {
+			content: attr(data-prefix);
+			display: inline-block; 
+		}
+
+		&:after {
+			content: attr(data-suffix);
+			display: inline-block; 
+		}
+
+		@include breakpoint-down(mobile) {
+			font-size: 62px; 
+		}
+	}
+
+	p {
+		font-weight: 700; 
+	}
+}

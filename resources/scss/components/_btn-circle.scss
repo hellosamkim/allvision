@@ -1,0 +1,63 @@
+/* ------------------------------------------------------------ *\ 
+	- Btn Circle
+\* ------------------------------------------------------------ */
+
+.btn-circle {
+	width: 36px; 
+	height: 36px; 
+	border-radius: 50%;
+	background-color: $c-secondary;
+
+	& > i {
+		@util center;
+	}
+
+	.ico-arrow {
+		path {
+			fill: white;
+		}
+	}
+
+	&:not([data-text=""]):before {
+		content: attr(data-text);
+		position: absolute; 
+		bottom: calc(100% + 10px);
+		background-color: $c-secondary;
+		color: white;
+		padding: 5px 12px;  
+		font-weight: 700;  
+		font-size: 14px;
+		opacity: 0;
+		transition: opacity $t-duration;
+	}
+
+	@media (hover: hover), (-ms-high-contrast: none) {
+		&:hover:before {
+			opacity: 1;
+		}
+
+		&:hover {
+			background-color: $c-tertiary; 
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\ 
+	-- Prev
+\* ------------------------------------------------------------ */
+
+.btn-circle--prev {
+	&:before {
+		left: 0; 
+	}
+}
+
+/* ------------------------------------------------------------ *\ 
+	-- Next
+\* ------------------------------------------------------------ */
+
+.btn-circle--next {
+	&:before {
+		right: 0; 
+	}
+}

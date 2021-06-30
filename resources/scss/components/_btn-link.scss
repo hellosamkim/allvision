@@ -1,0 +1,163 @@
+/* ------------------------------------------------------------ *\ 
+	- Btn Link
+\* ------------------------------------------------------------ */
+
+.btn-link {
+	font-size: 0; 
+	line-height: 0; 
+	color: $c-secondary;
+	position: relative; 
+	padding-bottom: 4px; 
+	border: 0;
+	background: none; 
+
+	.ico-arrow {
+		width: 14px; 
+		height: 14px; 
+
+		path {
+			fill: $c-secondary;
+		}
+	}
+
+	&:before {
+		content: ' ';
+		position: absolute; 
+		left: 0; 
+		right: 0; 
+		bottom: 0;
+		height: 2px; 
+		background-color: $c-secondary; 
+		transition: background $t-duration, right $t-duration;
+	}
+
+	& > * {
+		display: inline-block; 
+		vertical-align: middle; 
+	}
+
+	& > span {
+		font-size: 16px; 
+		line-height: 20px;
+		font-family: $ff-gt;
+		font-weight: 500;
+	}
+
+	& > *:not(:last-child) {
+		position: relative;
+		margin-right: 5px; 
+	}
+
+	& > *:last-child {
+		position: relative;
+		right: 0;
+		transition: right $t-duration;
+	}
+
+	@media (hover: hover), (-ms-high-contrast: none) {
+		&:hover {
+			color: $c-tertiary;
+
+			.ico-arrow path {
+				fill: $c-tertiary;
+			}
+
+			&:before {
+				background-color: $c-tertiary; 
+				right: -10px;
+			}
+
+			& > *:last-child {
+				right: -10px;
+			}
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\ 
+	-- Colors
+\* ------------------------------------------------------------ */
+
+.btn-link--color-white {
+	color: white;
+
+	.ico-arrow {
+		path {
+			fill: white;
+		}
+	}
+
+	&:before {
+		background-color: white; 
+	}
+
+	@media (hover: hover), (-ms-high-contrast: none) {
+		&:hover {
+			color: white;
+
+			.ico-arrow path {
+				fill: white;
+			}
+
+			&:before {
+				background-color: white; 
+			}
+		}
+	}	
+}
+
+.btn-link--color-black {
+	color: black;
+
+	.ico-arrow {
+		path {
+			fill: black;
+		}
+	}
+
+	&:before {
+		background-color: black; 
+	}
+
+	@media (hover: hover), (-ms-high-contrast: none) {
+		&:hover {
+			.ico-arrow {
+				path {
+					fill: $c-tertiary;
+				}
+			}			
+
+			.ico-arrow-secondary {
+				border-top-color: $c-tertiary; 
+			}
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\ 
+	-- Size
+\* ------------------------------------------------------------ */
+
+.btn-link--size-small {
+	& > span {
+		font-size: 12px;
+	}
+
+	.ico-arrow {
+		width: 11px; 
+		height: 11px;
+	}
+
+	@media (hover: hover), (-ms-high-contrast: none) {
+		&:hover {
+			&:before {
+				background-color: $c-tertiary; 
+				right: -5px;
+			}
+
+			& > *:last-child {
+				right: -5px;
+			}
+		}
+	}	
+}
